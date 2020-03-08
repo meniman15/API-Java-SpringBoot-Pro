@@ -16,11 +16,9 @@ public class Employee extends RepresentationModel<Employee> implements Serializa
     int employeeId;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn
     GeneralDetails details;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn
     Spouse spouse;
 
     @OneToMany(mappedBy = "parent",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
